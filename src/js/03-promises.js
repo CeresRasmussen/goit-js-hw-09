@@ -27,14 +27,10 @@ function onSubmit(e) {
   for (let index = 1; index <= amount; index += 1) {
     createPromise(index, delay)
       .then(({ position, delay }) => {
-        Notiflix.Notify.success(
-          `✅ Fulfilled promise ${position} in ${delay}ms`
-        );
+        Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
-        Notiflix.Notify.failure(
-          `❌ Rejected promise ${position} in ${delay}ms`
-        );
+        Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`);
       });
     delay += stepDelay;
   }
