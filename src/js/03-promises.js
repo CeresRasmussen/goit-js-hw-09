@@ -34,5 +34,6 @@ function onSubmit(e) {
       });
     delay += stepDelay;
   }
+  refs.dataForm.reset();
 }
 refs.dataForm.addEventListener('submit', onSubmit);
