@@ -35,4 +35,4 @@ function onSubmit(e) {
     delay += stepDelay;
   }
 }
-refs.dataForm.addEventListener('submit', onSubmit, { once: true });
+refs.dataForm.addEventListener('submit', onSubmit);
